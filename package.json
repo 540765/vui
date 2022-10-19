@@ -1,18 +1,12 @@
-# Vue 3 + TypeScript + Vite 的 cms
-
-# 推荐使用 pnpm
-
-# package.json
-
-```json
-{
 {
 	"name": "vite-cms",
 	"version": "0.0.1",
+	"description": "基于 Vue3、TypeScript、Pinia 和 Vite 等主流技术的cms解決方案",
 	"scripts": {
 		"dev": "vite",
-		"build": "vue-tsc --noEmit && vite build",
+		"build:dev": "vue-tsc --noEmit && vite build",
 		"preview": "vite preview",
+		"style": "stylelint \"src/**/*.(vue|scss|css)\" --fix",
 		"lint": "pnpm lint:eslint && pnpm lint:prettier",
 		"lint:eslint": "eslint \"src/**/*.{vue,ts,tsx}\" --fix",
 		"lint:prettier": "prettier --write  \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
@@ -20,14 +14,12 @@
 		"commit": "git-cz"
 	},
 	"dependencies": {
-		"element-plus": "2.2.18",
-		"vue": "3.2.37",
-		"vue-router": "4.1.5"
+		"vue": "3.2.41"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.1.2",
 		"@commitlint/config-conventional": "^17.1.0",
-		"@types/node": "18.11.0",
+		"@types/node": "18.8.0",
 		"@typescript-eslint/eslint-plugin": "^5.40.0",
 		"@typescript-eslint/parser": "^5.40.0",
 		"@vitejs/plugin-vue": "3.1.0",
@@ -41,9 +33,23 @@
 		"eslint-plugin-vue": "^9.6.0",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.3",
+		"postcss": "^8.4.18",
+		"postcss-html": "^1.5.0",
+		"postcss-mixins": "^9.0.4",
+		"postcss-rem": "^2.0.2",
+		"postcss-scss": "^4.0.5",
 		"prettier": "^2.7.1",
+		"rollup-plugin-delete": "^2.0.0",
+		"stylelint": "14.14.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-recommended-vue": "^1.4.0",
+		"stylelint-config-standard": "^29.0.0",
+		"stylelint-config-standard-scss": "^5.0.0",
+		"stylelint-order": "^5.0.0",
+		"terser": "^5.15.1",
 		"typescript": "4.6.4",
 		"vite": "3.1.0",
+		"vite-plugin-dts": "^1.6.6",
 		"vue-eslint-parser": "^9.1.0",
 		"vue-tsc": "0.40.4"
 	},
@@ -67,7 +73,7 @@
 			"path": "node_modules/cz-customizable"
 		},
 		"cz-customizable": {
-			"config": "commitlint.config.js"
+			"config": "commitlint.config.cjs"
 		}
 	},
 	"keywords": [
@@ -80,4 +86,3 @@
 	],
 	"license": "MIT"
 }
-```
