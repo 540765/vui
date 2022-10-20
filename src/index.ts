@@ -1,7 +1,11 @@
-import { createApp } from "vue";
-import "./style.css";
-import App from "./App.vue";
+import { forEach } from "lodash-es";
+import type { App } from "vue";
+import * as components from "./components";
 
-const app = createApp(App);
-
-app.mount("#app");
+export const createVui = () => {
+	return (app: App) => {
+		forEach(components, (component, name) => {
+			app.component(name, component);
+		});
+	};
+};

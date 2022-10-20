@@ -15,7 +15,7 @@ module.exports = {
 	// 是否使用单引号
 	singleQuote: false,
 	// 更改引用对象属性的时间 可选值"<as-needed|consistent|preserve>"
-	//   quoteProps: "as-needed",
+	  quoteProps: "as-needed",
 	// 在JSX中使用单引号而不是双引号
 	//   jsxSingleQuote: false,
 	// 多行时尽可能打印尾随逗号。（例如，单行数组永远不会出现逗号结尾。） 可选值"<none|es5|all>"，默认none
@@ -25,7 +25,7 @@ module.exports = {
 	// jsx 标签的反尖括号需要换行
 	// jsxBracketSameLine: false,
 	// 在单独的箭头函数参数周围包括括号 always：(x) => x \ avoid：x => x
-	arrowParens: "always",
+	arrowParens: "avoid",
 	// 这两个选项可用于格式化以给定字符偏移量（分别包括和不包括）开始和结束的代码
 	// rangeStart: 0,
 	// rangeEnd: Infinity,
@@ -43,5 +43,5 @@ module.exports = {
 	//然而在 Linux 和 Unix 中只使用简单的换行分隔符 (LF)。
 	//对应的控制字符为 "\n" (LF) 和 "\r\n"(CRLF)。auto意为保持现有的行尾
 	// 换行符使用 lf 结尾是 可选值"<auto|lf|crlf|cr>"
-	endOfLine: "auto",
+	endOfLine: "lf",
 };

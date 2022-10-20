@@ -1,3 +1,8 @@
+<script lang="ts">
+export default {
+	name: "HelloWorld",
+};
+</script>
 <script setup lang="ts">
 import { ref } from "vue";
 

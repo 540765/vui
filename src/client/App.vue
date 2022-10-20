@@ -1,3 +1,5 @@
 <template>
-	<div>12</div>
+	<div>
+		<vbutton>23wowowo</vbutton>
+	</div>
 </template>

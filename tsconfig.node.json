@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "composite": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "ESNext",// 指定使用模块: 'commonjs', 'amd', 'system', 'umd' or 'es2015'
+    "moduleResolution": "Node",// 选择模块解析策略
     "allowSyntheticDefaultImports": true
   },
   "include": ["vite.config.ts"]

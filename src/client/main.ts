@@ -1,7 +1,9 @@
 import { createApp } from "vue";
-import "@/style.css";
+import "@/styles/index.css";
 import App from "./App.vue";
+
+import { createVui } from "../index";
 
 const app = createApp(App);
 
-app.mount("#app");
+app.use(createVui()).mount("#app");

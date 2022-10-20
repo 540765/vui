@@ -3,14 +3,14 @@ module.exports = {
 	env: {
 		browser: true,
 		node: true,
-		es6: true
+		es6: true,
 	},
 	globals: {
 		// script setup-全局注册
 		defineProps: "readonly",
 		defineEmits: "readonly",
 		defineExpose: "readonly",
-		withDefaults: "readonly"
+		withDefaults: "readonly",
 	},
 	//一些代码格式插件
 	extends: [
@@ -18,7 +18,7 @@ module.exports = {
 		"eslint:recommended",
 		"@vue/typescript/recommended",
 		"@vue/prettier",
-		"@vue/eslint-config-typescript"
+		"@vue/eslint-config-typescript",
 		// unplugin-auto-import 自动生成的文件
 		// "./types/.eslintrc-auto-import.json"
 	],
@@ -27,11 +27,11 @@ module.exports = {
 		parser: "@typescript-eslint/parser",
 		ecmaVersion: 2020,
 		sourceType: "module",
-		jsxPragma: "React",
+		// jsxPragma: "React",
 		ecmaFeatures: {
-			jsx: true,
-			tsx: true
-		}
+			// jsx: true,
+			tsx: true,
+		},
 	},
 	rules: {
 		// TS
@@ -46,15 +46,15 @@ module.exports = {
 			"error",
 			{
 				argsIgnorePattern: "^_",
-				varsIgnorePattern: "^_"
-			}
+				varsIgnorePattern: "^_",
+			},
 		],
 		"no-unused-vars": [
 			"error",
 			{
 				argsIgnorePattern: "^_",
-				varsIgnorePattern: "^_"
-			}
+				varsIgnorePattern: "^_",
+			},
 		],
 		// Vue
 		"vue/no-v-html": "off",
@@ -67,18 +67,18 @@ module.exports = {
 				html: {
 					void: "always",
 					normal: "always",
-					component: "always"
+					component: "always",
 				},
 				svg: "always",
-				math: "always"
-			}
+				math: "always",
+			},
 		],
 		// Prettier
 		"prettier/prettier": [
 			"error",
 			{
-				endOfLine: "auto"
-			}
-		]
-	}
+				endOfLine: "auto",
+			},
+		],
+	},
 };

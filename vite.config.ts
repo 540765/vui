@@ -21,8 +21,8 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: path.resolve("src/index.ts"),
-			name: "AtypicalUI",
-			fileName: (format) => `atypical.${format}.js`,
+			name: "vui",
+			fileName: format => `vui.${format}.js`,
 		},
 		rollupOptions: {
 			external: ["vue"],
